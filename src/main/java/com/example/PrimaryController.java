@@ -1,5 +1,9 @@
 package com.example;
 
+import java.sql.SQLException;
+
+import com.example.data.resultadoDao;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
@@ -23,6 +27,12 @@ public class PrimaryController {
 
         if (jogo.acabou() == true) {
             resultado.setText(jogo.resultado());
+            var resultado = new resultadoDao();
+            // try {
+            //     resultadoDao.inserir(resultado);
+            // } catch (SQLException e) {
+            //     e.printStackTrace();
+            // }
         }
         atualizar();
     }

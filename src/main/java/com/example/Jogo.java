@@ -20,6 +20,10 @@ public class Jogo {
     }
 
     public boolean acabou() {
+
+        var jogadoresPararam = jogador.parou() && computador.parou();
+        var jogadoresEstouraram = jogador.getPontos() > 21 && computador.getPontos() >21;
+
         if ((jogador.parou() == true && computador.parou() == true)
                 || (jogador.getPontos() >= 21 || computador.getPontos() >= 21)) {
             return true;

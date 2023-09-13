@@ -5,10 +5,8 @@ import java.sql.SQLException;
 
 public class resultadoDao {
 
-    private final String HOST = "auth-db719.hstgr.io";
-    private final String PORT = "1521";
-    private final String USER = "rm97784";
-    private final String PASS = "081100";
+    private final String USER = "rm99627";
+    private final String PASS = "051298";
     private final String URL = "jdbc:oracle:thin:@oracle.fiap.com.br:1521:orcl";
 
     public void inserir(Integer ptsJogador, Integer ptsComputador, String vencedor)
@@ -25,6 +23,9 @@ public class resultadoDao {
         instrucao.executeUpdate();
 
         con.close();
+    }
+
+    public static void inserir(resultadoDao resultado) {
     }
 
 }
